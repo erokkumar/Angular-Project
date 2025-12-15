@@ -12,4 +12,11 @@ export class App {
   name = 'Rohit'
   x = 5
   y = 10
+  cnt = 0
+  
+  onClick() {
+    this.cnt++;
+    alert(this.cnt)
+    
+  }
 }
