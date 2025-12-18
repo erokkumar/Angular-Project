@@ -38,6 +38,27 @@ export class App {
   handleCal(val: string, num1: number, num2: number) {
     this.result.set(this.calFun(val, num1, num2))
   }
+  name = ""
+  displayName="";
+
+  getName(event : Event){
+    this.name = (event.target as HTMLInputElement).value
+  }
+  disName(){
+    this.displayName = this.name
+  }
+  display = signal(false)
+
+  toggle(){
+    this.display.set(!this.display())
+  }
+  hide(){
+    this.display.set(false)
+  }
+  show(){
+    this.display.set(true)
+  }
+
 }
 
 

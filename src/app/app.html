@@ -8,6 +8,26 @@
                <button class="btn danger" (click)="handleCnt('reset')">Reset</button>
           </div>
      </div>
+     <div>
+          @if (displayName) {
+          <h1>Your name is : {{displayName}}</h1>
+          } @else {
+          <h1>Please enter your name</h1>
+          }
+          <input type="text" placeholder="Enter Name" (input)="getName($event)">
+          <button (click)="disName()">Submit</button>
+     </div>
+
+     <div>
+          <button (click)="hide()">Hide</button>
+          <button (click)="show()">Show</button>
+          <button (click)="toggle()">Toggle</button>
+
+          @if (display()) {
+          <div style="width: 100px; height: 100px; background-color: aquamarine;">check it
+          </div>
+          }
+     </div>
 
      <div class="card calculator-section">
           <h2>Calculator</h2>
